@@ -1,0 +1,57 @@
+<section class="containerr" >
+  <nav class="menu">
+      <div class="flex">
+       <ul>
+           <li> <a routerLink="../home">Home</a></li>
+         <li><a routerLink="../worldcup2022">World Cup 2022</a></li>
+         <div class="dropdownn">
+           <button class="dropbtn">Stadium
+             <i class="fa fa-caret-down"></i>
+           </button>
+           <div class="dropdownn-content">
+            <a routerLink="../listestade">Our Stadium</a>
+            <div *ngIf="currentUser?.role === 'admin'">   <a routerLink="../addteam">Add Team</a> </div>
+
+           </div>
+         </div>
+         <div class="dropdownn">
+          <button class="dropbtn">Team
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdownn-content">
+            <a routerLink="../listeteam">Our Team</a>
+            <div *ngIf="currentUser?.role === 'admin'">      <a routerLink="../addteam">Add Team</a> </div>
+
+          </div>
+        </div>
+         <li><a *ngIf="currentUser?.role === 'admin'" routerLink="../afflisteuser">List Users</a></li>
+         <li><a routerLink="../login">Contact</a></li>
+        </ul>
+      </div>
+      <div class="between">
+       <a (click)="logout()">LogOut</a>
+   </div>
+     </nav>
+
+</section>
+
+
+
+<!---->
+
+<br>
+
+<br>
+
+
+<iframe width="1000" height="500" style="    margin-left: 150px;" src="https://www.youtube.com/embed/ZldUWWVkqt4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<br>
+<br>
+<br>
+<hr>
+<div class="logo" >
+  <img src="../../assets/img/Logo.png" alt="" style="    margin-top: -90px;">
+</div>
+<footer >
+  <p>copyright @ 2022 Football</p>
+</footer>

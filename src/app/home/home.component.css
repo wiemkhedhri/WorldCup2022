@@ -1,0 +1,282 @@
+body{
+  margin: 0;
+}
+.container{
+  height: 670px;
+  width: 100%;
+  background-color: #2D25A0;
+
+}
+.menu{
+  display: flex;
+  justify-content: space-between;
+  padding-left: 156px;
+  padding-top: 42px;
+  padding-right: 121px;
+}
+.flex ul{
+  display: flex;
+}
+.flex ul li a{
+  text-decoration: none;
+  color: white;
+  margin-right: 36px;
+  font-size: 24px;
+
+}
+.flex ul li{
+  list-style: none;
+}
+.between{
+  padding-top: 25px;
+}
+.between a{
+  text-decoration: none;
+  color: white;
+  background-color: #E02C6D;
+  border: 1px solid #E02C6D;
+  padding: 10px 24px;
+  font-size: 20px;
+
+}
+.banner{
+  display: flex;
+}
+.banner-title{
+  padding-left: 300px;
+  padding-top: 207px;
+}
+.title{
+  font-size: 64px;
+  color: white;
+
+}
+.image{
+  margin-bottom: 86px;
+  transition: transform 1s ease-in;
+
+}
+.image img{
+width: 556px;
+height: 438px;
+padding-left: 50px;
+padding-top: 67px;
+padding-right: 140px;
+}
+.banner:hover .image{
+  transform: scale(1.2);
+}
+/* ----------------------
+player part stylesheet
+----------------------- */
+
+.player-list{
+  display: flex;
+  justify-content : center;
+}
+.players{
+  margin: 70px 50px 30px 50px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 30px;
+  grid-row-gap: 27px;
+}
+.player{
+  width: 300px;
+  height: 474px;
+  box-shadow: 0px 0px 10px #00000026;
+  padding: 15px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.player:hover img{
+  transform: scale(1.05);
+
+}
+.player img{
+  Width: 100%;
+  height: 256px;
+  transition: transform 1s ease-out;
+}
+.player-name{
+  font-size: 28px;
+}
+.player-info{
+  font-size: 16px;
+}
+/*
+------------------------------
+last part
+-------------------------------*/
+.last-part{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.last-banner{
+  width: 469px;
+  height: 309px;
+ margin-left: 150px;
+}
+.banner-info h1{
+  font-size: 48px;
+}
+
+.banner-info p{
+font-size:16px ;
+}
+.image1{
+  padding-left: 66px;
+}
+.image1 img{
+  width: 556px;
+  height: 438px;
+  padding-left: 66px;
+  padding-top: 140px;
+  padding-right: 140px;
+
+  }
+  .logo{
+      display: flex;
+      justify-content: center;
+      margin-top: 120px;
+  }
+
+  .logo img{
+      width: 480px;
+      height: 110px;
+ }
+ footer {
+  text-align: center;
+  margin-bottom: 100px;
+ }
+/*-----------------------
+responsive stylesheet
+---------------------- */
+@media only screen and (max-width:680px) {
+  .container{
+      width: 100%;
+  }
+  .banner{
+           flex-direction: column;
+            }
+   .menu{
+       display: none;
+   }
+   .banner-title{
+      padding-left: 20px;
+      padding-top: 40px;
+  }
+  .title{
+      font-size: 54px;
+  }
+  .image img{
+  width: 80%;
+  height: 250px;
+  padding-left: 60px;
+  padding-top: 50px;
+  padding-right: 10px;
+  }
+  .players{
+      grid-template-columns: repeat(1, 1fr);
+  }
+  .last-part{
+      width: 100%;
+      height: 800px;
+      display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .last-banner{
+      width: 250px;
+      height: 200px;
+     margin-left: 50px;
+
+  }
+  .image1 img{
+     width: 80%;
+     height: 300px;
+     padding-left: 20px;
+     padding-top: 400px;
+     padding-right: 30px;
+
+     }
+     .logo img{
+         width: 300px;
+         height: 110px;
+    }
+}
+/* responsive for tab   */
+@media only screen and (min-width:681px) and (max-width:992px) {
+  .container{
+      width: 100%;
+  }
+  .banner{
+           flex-direction: column;
+            }
+   .menu{
+       display: none;
+   }
+   .banner-title{
+      padding-left: 50px;
+      padding-top: 80px;
+  }
+  .title{
+      font-size: 54px;
+  }
+  .image img{
+  width: 80%;
+  height: 400px;
+  padding-left: 50px;
+  padding-top: 70px;
+  padding-right: 30px;
+  }
+  .players{
+      grid-template-columns: repeat(2, 1fr);
+  }
+
+
+
+}
+/*******************************/
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-size: 22px;
+  border: none;
+  outline: none;
+  color: white;
+  padding: 2px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+  margin-left: -16px;
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+.dropdown:hover .dropdown-content {
+  display: block;
+}

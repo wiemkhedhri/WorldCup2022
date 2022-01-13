@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FootBall Team </title>
+</head>
+
+<body>
+    <header>
+
+    </header>
+    <main>
+        <section class="container">
+           <nav class="menu">
+               <div class="flex">
+                <ul>
+                    <li> <a routerLink="../home">Home</a></li>
+                    <li><a routerLink="../worldcup2022">World Cup 2022</a></li>
+                  <div class="dropdown">
+                    <button class="dropbtn">Stadium
+                      <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div class="dropdown-content">
+                      <a routerLink="../listestade">Our Stadium</a>
+                      <div *ngIf="currentUser?.role === 'admin'"> <a routerLink="../addstade">Add Stadium</a></div>
+
+                    </div>
+
+                    </div>
+
+                  <div class="dropdown">
+                    <button class="dropbtn">Team
+                      <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div class="dropdown-content">
+                      <a routerLink="../listeteam">Our Team</a>
+                   <div *ngIf="currentUser?.role === 'admin'">   <a routerLink="../addteam">Add Team</a> </div>
+
+                    </div>
+                  </div>
+                  <li><a *ngIf="currentUser?.role === 'admin'" routerLink="../afflisteuser">List Users</a></li>
+                  <li><a routerLink="../login">Contact</a></li>
+                 </ul>
+               </div>
+               <div class="between">
+                <a (click)="logout()">LogOut</a>
+            </div>
+              </nav>
+             <div class="banner">
+                <div class="banner-title">
+                    <div class="title">
+                        Conmebol
+                        Copa America
+                        2021
+                      </div>
+                      <div class="between">
+                          <a routerLink="../worldcup2022">Watch Now</a>
+                      </div>
+                 </div>
+                  <div class="image">
+                      <img src="../../assets/img/banner.png" alt="">
+                  </div>
+             </div>
+        </section>
+        <section class="player-list">
+            <div class="players">
+                <div class="player">
+                    <img src="../../assets/img/player-1.png" alt="">
+                    <h2 class="player-name">Neymar </h2>
+                    <p class="player-info">
+                      Neymar da Silva Santos Júnior (born 5 February 1992), known as Neymar, is a Brazilian professional footballer who plays as a forward for Ligue 1 club Paris Saint-Germain and the Brazil national team.
+
+                    </p>
+                </div>
+                <div class="player">
+                    <img src="../../assets/img/player-2.png" alt="">
+                    <h2 class="player-name">Lionel Messi</h2>
+                    <p class="player-info">
+                      Lionel Andrés Messi born 24 June 1987  also known as Leo Messi, is an Argentine professional footballer who plays as a forward for Ligue 1 club Paris Saint-Germain and captains the Argentina national team.
+
+                    </p>
+                </div>
+                <div class="player">
+                    <img src="../../assets/img/player-3.png" alt="">
+                    <h2 class="player-name">Cristiano Ronaldo</h2>
+                    <p class="player-info">
+                      Cristiano Ronaldo dos Santos born 5 February 1985) is a Portuguese professional footballer who plays as a forward for Premier League club Manchester United and captains the Portugal national team.
+
+                    </p>
+                </div>
+                <div class="player">
+                    <img src="../../assets/img/player-4.png" alt="">
+                    <h2 class="player-name">Paulo Dybala</h2>
+                    <p class="player-info">
+                      Paulo Exequiel Dybala (born 15 November 1993) is an Argentine professional footballer who plays as a forward for Serie A club Juventus and the Argentina national team.
+                    </p>
+                </div>
+                <div class="player">
+                    <img src="../../assets/img/player-5.png" alt="">
+                    <h2 class="player-name">Mesut Özil</h2>
+                    <p class="player-info">
+                      Mesut Özil  born 15 October 1988 is a German professional footballer who plays as an attacking midfielder for Süper Lig club Fenerbahçe. Özil is known for his technical skills, creativity, passing skills, and vision.
+                    </p>
+                </div>
+                <div class="player">
+                    <img src="../../assets/img/player-6.png" alt="">
+                    <h2 class="player-name">Mauro Icardi</h2>
+                    <p class="player-info">
+                      Mauro Emanuel Icardi  born 19 February 1993) is an Argentine professional footballer who plays as a striker for Ligue 1 club Paris Saint-Germain and the Argentina national team.
+                    </p>
+                </div>
+                <div class="player">
+                    <img src="../../assets/img/player-7.png" alt="">
+                    <h2 class="player-name">Ángel Di María</h2>
+                    <p class="player-info">
+                      Ángel Fabián di María (born 14 February 1988) is an Argentine professional footballer who plays for Ligue 1 club Paris Saint-Germain and the Argentina national team. He can play as either a winger or attacking midfielder
+                    </p>
+                </div>
+                <div class="player">
+                    <img src="../../assets/img/player-8.png" alt="">
+                    <h2 class="player-name">Kylian Mbappé</h2>
+                    <p class="player-info">
+                      Kylian Mbappé Lottin (born 20 December 1998) is a French professional footballer who plays as a forward for Ligue 1 club Paris Saint-Germain and the France national team
+                </div>
+                <div class="player">
+                    <img src="../../assets/img/player-9.png" alt="">
+                    <h2 class="player-name">Mohamed Salah</h2>
+                    <p class="player-info">
+                      Mohamed Salah Hamed Mahrous Ghaly   born 15 June 1992), also known as Mo Salah, is an Egyptian professional footballer
+                      who plays as a forward for Premier League club Liverpool and captains the Egypt national team
+                    </p>
+                </div>
+                <div class="player">
+                    <img src="../../assets/img/player-10.png" alt="">
+                    <h2 class="player-name">Harry Kane</h2>
+                    <p class="player-info">
+                      Harry Edward Kane MBE (born 28 July 1993) is an English professional footballer who plays as a striker for Premier League club Tottenham Hotspur and captains the England national team
+                    </p>
+                </div>
+                <div class="player">
+                    <img src="../../assets/img/player-11.png" alt="">
+                    <h2 class="player-name">kevin de bruyne</h2>
+                    <p class="player-info">
+                      Kevin De Bruyne (born 28 June 1991) is a Belgian professional footballer who plays as a midfielder for Premier League club Manchester City and the Belgium national team
+                    </p>
+                </div>
+                <div class="player">
+                    <img src="../../assets/img/player-12.png" alt="">
+                    <h2 class="player-name">philippe coutinho</h2>
+                    <p class="player-info">
+                      Philippe Coutinho Correia (born 12 June 1992) is a Brazilian professional footballer who plays as an attacking midfielder or winger for La Liga club Barcelona and the Brazil national team
+                    </p>
+                </div>
+            </div>
+        </section>
+      <section class="last-part">
+        <div class="last-banner">
+            <div class="banner-info">
+                <h1>All Highlights
+                Copa America 2021</h1>
+                <p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</p>
+           </div>
+             <div class="between">
+                <a href="">Watch Now</a>
+             </div>
+        </div>
+        <div class="image1">
+            <img src="../../assets/img/match.png" alt="">
+        </div>
+      </section>
+      <div class="logo">
+        <img src="../../assets/img/Logo.png" alt="">
+     </div>
+      <footer >
+             <p>copyright @ 2022 Football</p>
+       </footer>
+    </main>
+</body>
+
+</html>
